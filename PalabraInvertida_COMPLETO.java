@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Taller_1;
+package Taller_2;
 
 import java.util.Scanner;
 
@@ -16,14 +16,26 @@ public class PalabraInvertida_COMPLETO {
     Scanner leer = new Scanner(System.in);
     String palabra;
     void ver() {
-        System.out.println(" ingresa una palabra para darla alreves  = ");
+        System.out.print("\n Digite la palabra que se mostrara invertida  :\n ");
         palabra = leer.nextLine();
         char[] invertir = palabra.toCharArray();
+        System.out.println("\n ____________ Usando for ____________\n");
         
-        int cont;
-        for (cont = palabra.length() - 1; cont >= 0; cont--) {
-            System.out.println(" "+invertir[cont]);
+        for (int cont = palabra.length() - 1; cont >= 0; cont--) {    //ok
+            System.out.print(" "+invertir[cont]);
         }
-        System.out.println(" resultado de "+palabra);
+        System.out.println("\n ____________ Usando while ____________\n");
+        int cont2=palabra.length() - 1;
+        while(cont2 >=0){
+            System.out.print(" "+invertir[cont2]);     //ok
+            cont2--;
+        }
+        System.out.println("\n ____________ Usando do while ____________\n");
+        int cont3 =palabra.length() - 1;
+        do {
+            System.out.print(" "+invertir[cont3]);     //ok
+            cont3--;
+        } while (cont3 >=0);
+        
     }
 }
